@@ -2,12 +2,12 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-h2 {
+h3 {
   color: teal;
 }
 
 .title {
-  color: green;
+  color: teal;
 }
 
 .uppercase {
@@ -23,10 +23,6 @@ h2 {
   height: 100px;
 }
 
-h3 {
+h4 {
   color: maroon;
-}
-
-#subtitle {
-  color: black;
 }
