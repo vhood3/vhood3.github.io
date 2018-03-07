@@ -1,13 +1,14 @@
 body {
   font-family: Helvetica, sans-serif;
+  background-color: #774538;
 }
 
 h3 {
-  color: teal;
+  color: #C5E0DC;
 }
 
 .title {
-  color: teal;
+  color: #E08E79;
 }
 
 .uppercase {
@@ -28,9 +29,13 @@ h4 {
 }
 
 #subtitle {
-  color: black;
+  color: #F1D4Af;
 }
 
 a {
   text-decoration:none;
+}
+
+p {
+  color: #ECE5CE;
 }
