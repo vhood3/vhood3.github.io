@@ -35,12 +35,9 @@ h4 {
 
 a {
   text-decoration:none;
+  color: gray;
 }
 
 p {
   color: #424254;
-}
-
-img {
-  float: left;
 }
