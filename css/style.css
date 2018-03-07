@@ -1,13 +1,14 @@
 body {
   font-family: Helvetica, sans-serif;
+  background-color: gray;
 }
 
 h3 {
-  color: green;
+  color: #64908A;
 }
 
 .title {
-  color: teal;
+  color: #351330;
 }
 
 .uppercase {
@@ -28,7 +29,7 @@ h4 {
 }
 
 #subtitle {
-  color: #031634;
+  color: #424254;
 }
 
 a {
@@ -37,5 +38,5 @@ a {
 }
 
 p {
-  color: #031634;
+  color: #E8CAA4;
 }
