@@ -38,3 +38,7 @@ a {
 p {
   color: #031634;
 }
+
+img {
+  float: left;
+}
