@@ -1,0 +1,8 @@
+let projectObject = {
+  id: 1,
+  url = 'https://www.arcgis.com/apps/MapTour/index.html?appid=cbfdf33555724fd1b5282eb373d1d31a',
+  title = 'Story Map tour Scranton',
+  desc = 'Book Assignment 1',
+  thumb: true,
+  keywords: ['Scranton','Story Map']
+}
