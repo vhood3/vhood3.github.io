@@ -1,21 +1,25 @@
-let map = L.map('mapThree').setView([51.505, -0.09], 13)
+let map = L.map('VictoriaMap').setView([20.755035, -155.983552], 13)
+let hawaiimap = 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'
+L.tileLayer(hawaiimap).addTo(map)
 
-L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
-attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-subdomains: 'abcd',
-ext: 'png'
-}).addTo(map)
-
-let dinah = L.icon({
-  iconUrl: 'images/dinah.jpg',
-  iconSize: [120, 85], // size of the icon
+let beachicon = L.icon({
+  iconUrl: 'hawaii.png',
+  iconSize: [38, 95], // size of the icon
   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 })
 
-let marker = L.marker([51.5, -0.09], {icon:dinah}).addTo(map)
-let polygon = L.polygon([
-  [51.509, -0.08],
-  [51.503, -0.06],
-  [51.51, -0.047]
-]).addTo(map)
+let mymarker = L.marker([20.756222, -155.980623], {icon: beachicon}).addTo(map);
+
+let polyStyle = {
+  color: 'yellow',
+  fillColor: 'blue'
+  fillOpacity: 0.4
+}
+
+let polyCoords = [
+  [20.755035, -155.983552],
+  [20.754614, -155.984624],
+  [20.753326, -155.984078]]
+
+let myPolygon = L.polygon(polyCoords, polyStyle).addTo(map)
