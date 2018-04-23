@@ -1,5 +1,5 @@
 let map = L.map('VictoriaMap').setView([20.755035, -155.983552], 13)
-let hawaiimap = 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'
+let hawaiimap = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png'
 L.tileLayer(hawaiimap).addTo(map)
 
 let beachicon = L.icon({
