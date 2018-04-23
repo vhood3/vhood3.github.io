@@ -1,21 +1,22 @@
-//step 7: Create the first line of JavaScript to create an empty map. Set your own variable name, map div id, coordinates, and zoom level
-//let someName = L.map('your-map-div-id').setView([yourLat, yourLon], yourZoom)
-let map = L.map('map1').setView([20.755035, -155.983552], 13)
-//step 8: Add a basemap layer to the map using your preferred basemap’s URL and your own map object’s name’.
-L.tileLayer(L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png').addTo(map)
-//step 9a: Mark a point of interest on the map using Leaflet’s marker method. Use your own variable names and coordinates.
-let mypoint = L.mypoint([20.756222, -155.980623]).addTo(map)
-//step 9b: Draw a polygon around an area of interest.
-let polygon = L.polygon([
+let map = L.map('VictoriaMap').setView([20.755035, -155.983552], 13)
+let hawaiimap = 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'
+L.tileLayer(hawaiimap).addTo(map)
+let mypoint = L.marker([20.756222, -155.980623]).addTo(map)
+let myshape = L.polygon([
   [20.755035, -155.983552],
   [20.754614, -155.984624],
   [20.753326, -155.984078]
 ]).addTo(map)
-//step 10: Create popups for your marker and polygon. Note the backslash allowing the use of an apostrophe.
-polygon.bindPopup('Hana Bay Beach Park')
+
+myshape.bindPopup('Hana Bay Beach Park')
 mypoint.bindPopup('Maplesden Beach')
-//step 11: Create an “event listener” that listens for a click on the map and then runs a function to log the clicked location to the console.
-map.on('click', function (event) {
-  console.log('You clicked the map at ' + event.latlng)
+
+var latlng = [
+  [20.759171, -155.987151],
+  [20.756513, -155.985506],
+];
+var line = L.polyline(latlng, {color: 'red'}).addTo(map)
+
+map.on('click', function (event){
+  consol.log('You clicked the map at' + event.latlng)
 })
-//step 12: Consult the Leaflet documentation (or Google) to add a “polyline” to the map. No popup needed.
