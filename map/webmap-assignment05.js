@@ -37,5 +37,5 @@ geoJSONoptions = {
   onEachFeature: createPopup
 }
 
-L.geoJSON(stateDemo, geoJSONoptions).addTo(map)
+L.geoJSON(stateDemographics, geoJSONoptions).addTo(map)
 L.control.layers(hawaiiBaseMaps).addTo(map)
