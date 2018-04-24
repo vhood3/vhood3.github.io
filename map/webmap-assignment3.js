@@ -1,19 +1,19 @@
 let map = L.map('VictoriaMap').setView([20.755035, -155.983552], 13)
-let hawaiimap = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png'
-L.tileLayer(hawaiimap).addTo(map)
 
-let beachicon = L.icon({
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png').addTo(map)
+
+let myBeachIcon = L.icon({
   iconUrl: 'hawaii.png',
   iconSize: [38, 95], // size of the icon
   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 })
 
-let mymarker = L.marker([20.756222, -155.980623], {icon: beachicon}).addTo(map);
+let mymarker = L.marker([20.756222, -155.980623], {icon: myBeachIcon}).addTo(map);
 
 let polyStyle = {
-  color: 'yellow',
-  fillColor: 'blue'
+  color: 'blue',
+  fillColor: 'yellow'
   fillOpacity: 0.4
 }
 
