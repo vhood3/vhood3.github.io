@@ -12,17 +12,17 @@ let hawaiiBaseMaps = {
   'World physical map': hawaiimap3,
 }
 
-geoJSONstyle = function (states) {
+mygeoJSONstyle = function (states) {
   let age = states.properties.MED_AGE
   let statecolor = 'Green'
   if ( age < 38 ) {statecolor = 'Blue'}
-  let Style = {
+  let mygeoJSONstyle = {
     color: statecolor,
     weight: 2,
     fillOpacity: 0.2,
     opacity: 0.3,
   }
-  return Style
+  return mygeoJSONstyle
 }
 
 function createPopup (states, statelayer) {
@@ -33,9 +33,9 @@ function createPopup (states, statelayer) {
 }
 
 geoJSONoptions = {
-  style: geoJSONstyle,
+  style: mygeoJSONstyle,
   onEachFeature: createPopup
 }
 
-L.geoJSON(stateDemographics, geoJSONoptions).addTo(map)
+L.geoJSON(stateDemo, geoJSONoptions).addTo(map)
 L.control.layers(hawaiiBaseMaps).addTo(map)
